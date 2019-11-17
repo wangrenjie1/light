@@ -7,8 +7,8 @@
 
 > 问题来源于某次在群里的讨论，关于 `text-align:center` 的使用场景，是否必须要与 `display:inline` 配合使用？于是展开了与 `display` 相关的更为深入的理解
 
-* `display ` 属性的三个值  `block` `inline` `inline-block` 的理解
-* `text-align:center` 在 `block` `inline` `inline-block` 中的不同场景
+* `display ` 属性的三个值  `block` `inline` `inline-block` 的理解 （[查看demo](https://github.com/wangrenjie1/toutiao_four_men/blob/master/hauk0101/demos/css/demo-css-display.html)）
+* `text-align:center` 在 `block` `inline` `inline-block` 中的不同场景 （[查看demo](https://github.com/wangrenjie1/toutiao_four_men/blob/master/hauk0101/demos/css/demo-css-display.html)）
 * `display` 的属性值枚举及相关举例
 
 
@@ -31,7 +31,7 @@
             * 去除的办法是将父元素设置 font-size:0
             * 删除回车符，但是会导致 html 中的代码很长，不易阅读
 
-* `text-align:center` 在 `block` `inline` `inline-block` 中的不同场景，详细 demo 请见项目的 `demos/css/demo-css-display.html`
+* `text-align:center` 在 `block` `inline` `inline-block` 中的不同场景
     * 目的是为了让子元素水平居中      
     * 父元素设置 `display:inline` `display:inline-block` 与 `text-align:center` 并不会使子元素水平居中
     * 父元素设置 `display:block` `text-align:center` ，子元素设置不同的 `display:inline` 、`display:inline-block` 、`display:block` 的属性值的影响
