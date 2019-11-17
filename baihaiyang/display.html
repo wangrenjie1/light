@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        .test1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            color: #000;
+            font-size: 20px;
+            /* display: none; */
+            margin: 10px;
+        }
+        .test2 {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            color: #000;
+            font-size: 20px;
+            margin: 10px;
+            visibility: hidden;
+            
+        }
+        .test2 .child {
+            visibility: visible;       
+        }
+        .qianmian {
+            display: inline-block;
+            background: red;
+        }
+        .houmian {
+            display: inline-block;
+            background: blue;
+        }
+        .test {
+            /* font-size: 0; */
+        }
+        .test span {
+            display: inline-block;
+            border: 1px solid red;
+            font-size: 20px;
+            /* vertical-align: bottom; */
+        }
+        .test .span1 {
+            width: 200px;
+            height: 100px;
+        }
+        .test .span2 {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        <span class="span1">test onetest onetest one</span>
+        <span class="span2">test two</span>
+    </div>
+    <div class="qianmian">前面的文字</div>
+    <div class="houmian">后面的文字</div>
+    <div class="test1">这里是display：none</div>
+    <div class="test2">这里是visibility：hidden
+        <p class="child">这是儿子元素</p>
+    </div>
+    <div class="test1">这里是display：none</div>
+    <div class="test2">这里是visibility：hidden</div>
+</body>
+</html>
