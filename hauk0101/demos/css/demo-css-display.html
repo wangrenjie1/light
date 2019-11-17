@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>如何理解 display 的属性值</title>
+</head>
+<style>
+    .demo-1-container{
+        background-color: bisque;
+    }
+    .demo-1-container p{
+        font-size: 14px;
+        font-style: italic;
+    }
+    .demo-1-inline-container{
+        display: inline;
+        text-align: center;
+        background-color: rgb(210, 210, 255);
+    }
+    .demo-1-inline-block-container{
+        display: inline-block;
+        text-align: center;
+        background-color: rgb(210, 210, 255);
+    }
+    .demo-1-block-container{
+        display: block;
+        text-align: center;
+        background-color: rgb(210, 210, 255);
+    }
+
+    .demo-2-container{
+        background-color: bisque;
+    }
+    .demo-2-container p{
+        font-size: 14px;
+        font-style: italic;
+    }
+    .demo-2-content-container{
+        width: 800px;
+        height: 100px;
+        display: block;
+        text-align: center;
+        background-color: rgb(210, 210, 255);
+    }
+    .demo-2-content-block{
+        display: block;
+        width: 300px;
+        height: 80px;
+        background-color: rgb(190, 189, 124);
+    }
+    .demo-2-content-inline-block{
+        display: inline-block;
+        width: 300px;
+        height: 80px;
+        background-color: rgb(190, 189, 124);
+    }
+    .demo-2-content-inline{
+        display: inline;
+        width: 300px;
+        height: 80px;
+        background-color: rgb(190, 189, 124);
+    }
+
+    
+
+</style>
+<body>
+    <h3>父元素 display 的 inline 、inline-block、block 对 text-align 的影响</h3>
+    <section class="demo-1">
+        <h4>统一子元素为 span ，默认为 display:inline</h4>
+        <section class="demo-1-container">
+            <h5>inline 对 text-align 的影响</h5>
+            <section class="demo-1-inline-container">
+                    <span>我是 demo-1-line 的子元素1</span>
+                    <span>我是 demo-1-line 的子元素2</span>
+                    <span>我是 demo-1-line 的子元素3</span>
+            </section>
+            <p>说明：父元素为 display:inline 并设置 text-align:center 并不会使子元素水平居中</p>
+        </section>
+        <section class="demo-1-container">
+                <h5>inline-block 对 text-align 的影响</h5>
+                <section class="demo-1-inline-block-container">
+                        <span>我是 demo-1-inline-block 的子元素1</span>
+                        <span>我是 demo-1-inline-block 的子元素2</span>
+                        <span>我是 demo-1-inline-block 的子元素3</span>
+                </section>
+                <p>说明：父元素为 display:inline-block 并设置 text-align:center 并不会使子元素水平居中</p>
+        </section>
+        <section class="demo-1-container">
+                <h5>block 对 text-align 的影响</h5>
+                <section class="demo-1-block-container">
+                        <span>我是 demo-1-block 的子元素1</span>
+                        <span>我是 demo-1-block 的子元素2</span>
+                        <span>我是 demo-1-block 的子元素3</span>
+                </section>
+                <p>说明：父元素为 display:block 并设置 text-align:center 使子元素水平居中</p>
+        </section>
+    </section>   
+    <h3>子元素 display 的 inline、inline-block、block 对 text-align 的影响 </h3>
+     <section class="demo-2"> 
+         <h4>统一父元素为 display:block ，text-align:center 的设置</h4>
+        <section class="demo-2-container">
+           <h5>子元素设置 display:block </h5>
+           <section class="demo-2-content-container">
+               <section class="demo-2-content-block">display:block 子元素</section>
+           </section>
+           <p>子元素是block,则子元素的文字相对子元素居中，而子元素并不会相对父元素居中</p>
+        </section>
+        <section class="demo-2-container">
+           <h5>子元素设置 display:inline-block </h5>
+           <section class="demo-2-content-container">
+               <section class="demo-2-content-inline-block">display:inline-block 子元素</section>
+           </section>
+           <p>子元素是inline-block，则子元素的文字不仅相对子元素居中，而且子元素相对父元素也居中</p>
+        </section>
+        <section class="demo-2-container">
+                <h5>子元素设置 display:inline </h5>
+                <section class="demo-2-content-container">
+                    <section class="demo-2-content-inline">display:inline 子元素</section>
+                </section>
+                <p>子元素是inline，则子元素的文字无法撑起子元素，子元素的宽高就是文字的宽高，而子元素是相对父元素居中的（设置宽高并不会生效）</p>
+        </section>
+     </section>
+</body>
+</html>

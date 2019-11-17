@@ -6,6 +6,7 @@
 ##  问题池
 1. 父窗口 域名 www.lalala.com   里面 嵌套 iframe ,iframe 域名 localhost:8080 ,iframe调用父窗口方法，目前做法 postMessage
 2. dependencies、devDependencies 深入
+3. Vue __ob__: Observer 的理解，问题场景
 
 
 ##  已解决问题
