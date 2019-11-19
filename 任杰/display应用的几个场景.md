@@ -2,7 +2,7 @@
 
 ## 如何触发BFC ？
 
-1. 根元素 说白了 <html></html> 
+1.  <html></html> 
 2. float不为none
 3. position为absolute或者fixed
 4. display为inline-block,table-cell,table-caption,flex,inline-flex
