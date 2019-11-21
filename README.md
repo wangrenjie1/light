@@ -8,6 +8,7 @@
 2. dependencies、devDependencies 深入
 3. `Vue __ob__: Observer` 的理解，问题场景
 4. 在 Vue 中，子组件为何不可以修改父组件传递的 Props，如果修改了，Vue 是如何监控到属性的修改并给出警告的。
+5. 深入了解js异步 promise、async/await执行顺序
 
 
 
